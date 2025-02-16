@@ -4,17 +4,17 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php
-$host = 'localhost'; // หรือ IP ของเซิร์ฟเวอร์ฐานข้อมูล
-$dbname = 'instaX'; // ชื่อฐานข้อมูล
-$username = 'root'; // ชื่อผู้ใช้ MySQL
-$password = ''; // รหัสผ่าน MySQL
+$host = '127.0.0.1'; // หรือใช้ 'db' ถ้าใช้ Docker
+$dbname = 'instaX';
+$username = 'root';
+$password = '';
 
-// เชื่อมต่อฐานข้อมูล
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "การเชื่อมต่อฐานข้อมูลล้มเหลว: " . $e->getMessage();
+    die("❌ การเชื่อมต่อฐานข้อมูลล้มเหลว: " . $e->getMessage());
 }
 ?>
+
 
