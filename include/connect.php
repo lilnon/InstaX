@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php
-$host = 'db'; // ใช้ชื่อ service ของ MySQL ใน Docker Compose
+$host = 'db'; // ใช้ชื่อ service ของ MySQL จาก docker-compose.yml
 $dbname = 'instaX';
 $username = 'root';
 $password = 'rootpassword';
@@ -16,5 +16,6 @@ try {
     die("❌ การเชื่อมต่อฐานข้อมูลล้มเหลว: " . $e->getMessage());
 }
 ?>
+
 
 
