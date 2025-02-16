@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php
-$host = '172.19.0.2'; // ใช้ IP ที่ได้จากการตรวจสอบ
+$host = 'db'; // Use the service name of the database container
 $dbname = 'instaX';
 $username = 'root';
 $password = 'rootpassword';
