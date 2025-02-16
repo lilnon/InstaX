@@ -14,7 +14,7 @@ services:
       - db_data:/var/lib/mysql
 
   php:
-    image: php:7.4-apache
+    build: .
     container_name: my-php
     depends_on:
       - db

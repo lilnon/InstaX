@@ -1,13 +1,13 @@
-FROM php:8.2-apache
+FROM php:7.4-apache
 
-# ติดตั้งส่วนขยายที่จำเป็น
+# Install necessary PHP extensions
 RUN docker-php-ext-install pdo pdo_mysql
 
-# คัดลอกโค้ดเว็บเข้าไปใน Container
+# Copy website code into the container
 COPY . /var/www/html/
 
-# เปิดพอร์ต 80
+# Expose port 80
 EXPOSE 80
 
-# รัน Apache Server
+# Run Apache Server
 CMD ["apache2-foreground"]
