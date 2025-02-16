@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php
-$host = '127.0.0.1'; // หรือใช้ 'db' ถ้าใช้ Docker
+$host = 'db.render.com'; // หรือใช้ 'db' ถ้าใช้ Docker
 $dbname = 'instaX';
 $username = 'root';
 $password = '';
