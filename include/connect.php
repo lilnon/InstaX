@@ -4,10 +4,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php
-$host = 'hostname.render.com'; // หรือใช้ 'db' ถ้าใช้ Docker
+$host = 'db'; // ใช้ชื่อ service ของ MySQL ใน Docker Compose
 $dbname = 'instaX';
 $username = 'root';
-$password = '';
+$password = 'rootpassword';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
